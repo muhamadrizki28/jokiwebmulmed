@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Poppins:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Poppins&display=swap");
 /* NOTESS
     FONT KECIL : font-family: "Poppins", sans-serif;
     JUDUL GEDE : font-family: 'Montserrat', sans-serif;
@@ -8,8 +8,73 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  /*  */
+}
+h1 {
+  font-family: "Montserrat", sans-serif;
 }
 /* riski */
 
 /* eka */
+button {
+  width: 150px;
+  padding: 5px;
+  border-radius: 100px;
+  border: none;
+  background-color: #1887d0;
+  color: white;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+button:hover {
+  background-color: white;
+  color: black;
+}
+body {
+  height: 2000px;
+  width: 100%;
+  background-image: url("../img/head.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(0, 0, 0);
+  padding-right: 80px;
+  padding-left: 80px;
+  position: fixed;
+  width: 100%;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.685);
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  margin-top: 20px;
+}
+nav ul li {
+  margin: 10px 20px 10px 20px;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+nav ul li a:hover {
+  color: #48a0db;
+  border-bottom: 2px solid #48a0db;
+}
+header {
+  padding: 100px;
+  padding-top: 100px;
+  color: white;
+}
+header h1 {
+  margin-top: 120px;
+  font-size: 60px;
+  letter-spacing: 3px;
+}
+header p {
+  font-size: 14px;
+  width: 70%;
+  margin: 20px 0 20px 0;
+}
