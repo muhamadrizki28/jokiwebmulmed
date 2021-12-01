@@ -30,13 +30,12 @@ button:hover {
   color: black;
 }
 body {
-  height: 2000px;
   width: 100%;
-  background-image: url("../img/head.png");
+  background-image: url("../img/headerr.png");
   background-size: 100%;
   background-repeat: no-repeat;
 }
-nav {
+.a {
   display: flex;
   justify-content: space-between;
   background-color: rgb(0, 0, 0);
@@ -46,20 +45,20 @@ nav {
   width: 100%;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.685);
 }
-nav ul {
+.a ul {
   display: flex;
   list-style: none;
   margin-top: 20px;
 }
-nav ul li {
+.a ul li {
   margin: 10px 20px 10px 20px;
 }
-nav ul li a {
+.a ul li a {
   color: white;
   text-decoration: none;
   transition: all 0.3s;
 }
-nav ul li a:hover {
+.a ul li a:hover {
   color: #48a0db;
   border-bottom: 2px solid #48a0db;
 }
@@ -77,4 +76,46 @@ header p {
   font-size: 14px;
   width: 70%;
   margin: 20px 0 20px 0;
+}
+.why {
+  padding: 100px;
+  margin-top: 100px;
+}
+.why h2 {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-size: 40px;
+  font-family: "Montserrat", sans-serif;
+}
+.why .bb {
+  margin-top: 120px;
+  display: flex;
+  justify-content: center;
+}
+.bb .box-why {
+  margin: 20px;
+  text-align: center;
+}
+.box-why .why-2 {
+  margin-top: 10px;
+}
+.box-why .why-3 {
+  margin-top: -50px;
+}
+/* about */
+.about {
+  width: 100%;
+  padding: 100px;
+  background-color: black;
+  color: white;
+}
+.about h2 {
+  text-align: center;
+  font-size: 40px;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 50px;
+}
+.carousel {
+  width: 65%;
+  margin: auto;
 }
