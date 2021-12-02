@@ -65,7 +65,7 @@ include('assets/php/koneksi.php');
 
     if($_POST){
         $nama = $_POST['nama'];
-        $emaill = $_POST['emaill'];
+        $emaill = $_POST['email'];
         $telephone = $_POST['telephone'];
         $alamat = $_POST['alamat'];
         $tanggal = $_POST['tanggal'];
@@ -445,7 +445,7 @@ include('assets/php/koneksi.php');
                 <input maxlength="50" name="nama" id="nama" type="text" required placeholder="Nama Lengkap"  /></p>
                 
                 <p><label>Email *</label><br>
-                <input maxlength="80" name="email" id="email" type="email"required  placeholder="exp: nama@gmail.com" /></p>
+                <input name="email" id="email" type="email" required  placeholder="exp: nama@gmail.com" /></p>
                 
                 <p><label>Telephone *</label><br>
                 <input name="telephone" id="phone" type="text" required  placeholder="exp: 081x-xxxx-xxxx" /></p>
