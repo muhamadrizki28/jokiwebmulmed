@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Poppins&display=swap");
 /* NOTESS
     FONT KECIL : font-family: "Poppins", sans-serif;
     JUDUL GEDE : font-family: 'Montserrat', sans-serif;
@@ -7,10 +7,10 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 h1 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 ul {
   list-style: none;
@@ -32,7 +32,7 @@ button:hover {
 }
 body {
   width: 100%;
-  background-image: url('../img/headerr.png');
+  background-image: url("../img/headerr.png");
   background-size: 100%;
   background-repeat: no-repeat;
 }
@@ -86,7 +86,7 @@ header p {
   text-align: center;
   color: rgb(0, 0, 0);
   font-size: 40px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 .why .bb {
   margin-top: 120px;
@@ -114,7 +114,7 @@ header p {
 .about h2 {
   text-align: center;
   font-size: 40px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin-bottom: 50px;
 }
 .carousel {
@@ -128,12 +128,34 @@ header p {
   text-align: center;
   letter-spacing: 1.7px;
   font-size: 14px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
-
+.foot {
+  padding: 50px;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between !important;
+}
+.foot .f {
+  margin: 50px;
+}
+.foot img {
+  width: 200px;
+}
+.foot .os ul {
+  font-size: 14px;
+}
+.foot .os {
+  margin-top: 100px;
+}
+.foot .loc {
+  margin-top: 100px;
+  width: 400px;
+}
 /* ====bagian rizki */
 :root {
-  --var-font-lg: 'Montserrat', sans-serif;
+  --var-font-lg: "Montserrat", sans-serif;
 }
 main {
   width: 100%;
@@ -189,7 +211,7 @@ main {
 }
 
 .pricing-palden .pricing-item {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   cursor: default;
   color: #84697c;
   background: #fff;

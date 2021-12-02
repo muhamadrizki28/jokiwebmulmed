@@ -1,1 +1,11 @@
+@media only screen and (max-width: 920px) {
+  .a {
+    background-color: tomato;
+  }
+  body {
+    /* background-image: none; */
+  }
+}
 
+@media only screen and (max-width: 540px) {
+}
