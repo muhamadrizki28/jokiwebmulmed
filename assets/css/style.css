@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Poppins&display=swap");
 /* NOTESS
     FONT KECIL : font-family: "Poppins", sans-serif;
     JUDUL GEDE : font-family: 'Montserrat', sans-serif;
@@ -7,10 +7,10 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 h1 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 ul {
   list-style: none;
@@ -134,7 +134,7 @@ header p {
   text-align: center;
   color: rgb(0, 0, 0);
   font-size: 40px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 .why .bb {
   margin-top: 120px;
@@ -162,7 +162,7 @@ header p {
 .about h2 {
   text-align: center;
   font-size: 40px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin-bottom: 50px;
 }
 .carousel {
@@ -176,12 +176,34 @@ header p {
   text-align: center;
   letter-spacing: 1.7px;
   font-size: 14px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
-
+.foot {
+  padding: 50px;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between !important;
+}
+.foot .f {
+  margin: 50px;
+}
+.foot img {
+  width: 200px;
+}
+.foot .os ul {
+  font-size: 14px;
+}
+.foot .os {
+  margin-top: 100px;
+}
+.foot .loc {
+  margin-top: 100px;
+  width: 400px;
+}
 /* ====bagian rizki */
 :root {
-  --var-font-lg: 'Montserrat', sans-serif;
+  --var-font-lg: "Montserrat", sans-serif;
 }
 main {
   width: 100%;
@@ -237,7 +259,7 @@ main {
 }
 
 .pricing-palden .pricing-item {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   cursor: default;
   color: #84697c;
   background: #fff;
@@ -365,7 +387,15 @@ main {
       rgba(221, 221, 221, 0.08) 66.666%,
       rgba(221, 221, 221, 0.08) 99.999%
     ),
-    radial-gradient(circle at 14% 98%, rgba(27, 24, 24, 0.08) 0%, rgba(184, 184, 184, 0.08) 33.333%, rgba(96, 96, 96, 0.08) 33.333%, rgba(96, 96, 96, 0.08) 66.666%, rgba(7, 7, 7, 0.08) 66.666%, rgba(7, 7, 7, 0.08) 99.999%),
+    radial-gradient(
+      circle at 14% 98%,
+      rgba(27, 24, 24, 0.08) 0%,
+      rgba(184, 184, 184, 0.08) 33.333%,
+      rgba(96, 96, 96, 0.08) 33.333%,
+      rgba(96, 96, 96, 0.08) 66.666%,
+      rgba(7, 7, 7, 0.08) 66.666%,
+      rgba(7, 7, 7, 0.08) 99.999%
+    ),
     linear-gradient(45deg, rgb(38, 32, 39), rgb(11, 16, 58));
   color: white;
 }
@@ -482,7 +512,7 @@ main > section {
 .testim h1 {
   text-align: center;
   font-weight: bolder;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 .testim {
   width: 100%;
@@ -1100,7 +1130,7 @@ main > section {
   color: #000;
   font-weight: bolder;
   margin: 0em 0em 0.1em 0em;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 .contact-top p {
   font-size: 1em;
@@ -1120,7 +1150,7 @@ main > section {
   width: 100%;
   height: 100%;
 }
-.contact-left input[type='text'] {
+.contact-left input[type="text"] {
   font-size: 1em;
   font-weight: 400;
   color: #737373;
@@ -1140,7 +1170,7 @@ main > section {
   margin: 0em 0em 0.5em 0em;
   padding: 0.4em 0.5em 0.5em 0.5em;
 }
-.contact-left input[type='submit'] {
+.contact-left input[type="submit"] {
   font-size: 1em;
   font-weight: 400;
   color: #fff;
@@ -1150,7 +1180,7 @@ main > section {
   outline: none;
   margin: 0em 0em 0em 0em;
 }
-.contact-left input[type='submit']:hover {
+.contact-left input[type="submit"]:hover {
   background: #1887d0;
   transition: 0.5s all;
   -webkit-transition: 0.5s all;
@@ -1161,7 +1191,7 @@ main > section {
   font-size: 2em;
   color: #1887d0;
   margin-bottom: 0.6em;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
 }
 .contact-right-map {
   position: relative;
