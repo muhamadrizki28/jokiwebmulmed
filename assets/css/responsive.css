@@ -1,1 +1,146 @@
-
+@media only screen and (max-width: 1024px) {
+  .box-image-all img {
+    width: 300px;
+  }
+  .container-map .box-image-all img {
+    width: 50px;
+    height: 50px;
+  }
+  .container-map .box-image-all p {
+    font-size: 1rem;
+    padding: 0.2rem 1rem;
+  }
+  .contact-right-map {
+    margin-top: 3rem;
+  }
+}
+@media only screen and (max-width: 992px) {
+  header {
+    padding: 30px 100px;
+  }
+  .box-image-all img {
+    width: 250px;
+  }
+  header h1 {
+    margin-top: 120px;
+    font-size: 60px;
+  }
+}
+@media only screen and (max-width: 728px) {
+  .a {
+    overflow: hidden;
+  }
+  .box-image-all img {
+    width: 200px;
+  }
+  header h1 {
+    margin-top: 50px;
+    font-size: 40px;
+  }
+  .a ul {
+    position: absolute;
+    top: 4rem;
+    right: -20rem;
+    flex-direction: column;
+    background-color: #1887d0;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+  .a.active {
+    overflow: visible;
+  }
+  .a ul li a:hover {
+    color: #000;
+  }
+  .a ul.active {
+    transition: 0.8s ease-in-out;
+    right: 0rem;
+  }
+  .mobile-bar {
+    top: 2rem;
+    right: -4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  header button {
+    width: 20vw;
+    font-size: 3vw;
+  }
+  header p {
+    font-size: 12px;
+    text-align: justify;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .why .bb {
+    align-items: center;
+    flex-wrap: wrap;
+    flex-basis: 7;
+  }
+  .container-map .box-image-all p {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.5rem;
+  }
+  .bb .box-why {
+    margin: 20px 0 70px 0;
+  }
+  .box-image-all img {
+    width: 150px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .testim {
+    height: 100%;
+    position: relative;
+    top: 60%;
+  }
+  header h1 {
+    margin-top: 50px;
+    font-size: 30px;
+    width: 100%;
+  }
+  .contact-main {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .container-map {
+    padding: 0;
+  }
+  .container-map .box-image-all img {
+    width: 16vw;
+    height: 16vw;
+  }
+  .container-map .box-image-all p {
+    font-size: 3.5vw;
+    padding: 0.2rem 0.8rem;
+  }
+  .testim h1 {
+    font-size: 10vw;
+  }
+  header p {
+    font-size: 12px;
+    text-align: justify;
+    width: 100%;
+  }
+  .box-image-all img {
+    width: 79vw;
+  }
+  .box-gallery section h1 {
+    font-size: 10vw;
+  }
+  body img.logo-bg {
+    height: 150vh;
+  }
+  .modal-content {
+    width: 80vw !important;
+    height: 80vw !important;
+  }
+  .modal-body {
+    width: 100% !important;
+  }
+}

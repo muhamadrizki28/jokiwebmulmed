@@ -1,3 +1,85 @@
+<!-- FORM Contact mail SMTP-->
+<!-- <?php
+$statusMsg = '';
+$msgClass = '';
+if(isset($_POST['submit'])){
+
+    $email = $_POST['email'];
+    $name = $_POST['name'];
+    $message = $_POST['message'];
+
+
+    if(!empty($email) && !empty($name) && !empty($message)){
+
+        if(filter_var($email, FILTER_VALIDATE_EMAIL) === false){
+            $statusMsg = 'Please enter your valid email.';
+            $msgClass = 'errordiv';
+        }else{
+            //Untuk Tampilan di Subjek dan penerima email
+            $toEmail = 'rizkimod28@gmail.com'; 
+            $emailSubject = 'Pesan Website Dari '.$name;
+            $htmlContent = '
+              <div style="width:100%;height:100%; class="hihi">
+                <div style="width:90%;height:100%;margin:auto;background-color:#002147;color:white;padding:1em;">
+                    <h2 style="margin:0!important;background-color:#ffc107;color:black!important;font-weight:bolder;font-size:20px;text-align:center;padding:2em;border-radius:0 0 3px 3px;">Form Kontak Website IMC</h2>
+                    <h3>Nama:</h3><p style="background:linear-gradient(rgba(162, 162, 162,0.8),rgba(162, 162, 162,0.6));padding:.7em;">'.$name.'</p>
+                    <h3>Email:</h3><p style="background:linear-gradient(rgba(162, 162, 162,0.8),rgba(162, 162, 162,0.6));padding:.7em;">'.$email.'</p>
+                    <h3>Message:</h3><p style="background:linear-gradient(rgba(162, 162, 162,0.8),rgba(162, 162, 162,0.6));padding:.7em;">'.$message.'</p>
+                    <div style="width:40%;height:100%;margin:auto;padding:1.3em 1.1em;border-radius:2px;background-color:#ffc107;text-align:center!important;">
+                      <a href="www.imc.com" style="text-decoration:none!important;font-weight:bolder;color:black!important;text-align:center!important;">Kunjungi Website IMC</a>
+                    </div>
+                    <div style="width:100%;height:100%;margin:auto;color:white;padding:1em;text-align:center;padding-top:2em;">
+                      <p style="opacity:0.8;">
+                      Copyright &copy; 2021  All Rights Reserved by <br/>
+                      <span style="text-align:center;">IM Connect</span>
+                      </br/>
+                      </p>
+                    </div>
+                </div>
+              </div>
+              '; // Isi & Tampilan Body Email
+
+              //Pengaturan untuk email dalam bentuk HTML
+            $headers = "MIME-Version: 1.0" . "\r\n";
+            $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+
+
+            $headers .= 'From: '.$name.'<'.$email.'>'. "\r\n";
+
+            //Send EMail
+            if(mail($toEmail,$emailSubject,$htmlContent,$headers)){
+                $statusMsg = 'Pesan Anda sudah terkirim ke Email Kami !';
+                $msgClass = 'succdiv';
+            }else{
+                $statusMsg = 'Maaf pesan Anda gagal terkirim, silahkan ulangi lagi.';
+                $msgClass = 'errordiv';
+            }
+        }
+    }else{
+        $statusMsg = 'Harap mengisi semua field data';
+        $msgClass = 'errordiv';
+    }
+}
+
+include('assets/php/koneksi.php');
+
+    if($_POST){
+        $nama = $_POST['nama'];
+        $emaill = $_POST['emaill'];
+        $telephone = $_POST['telephone'];
+        $alamat = $_POST['alamat'];
+        $tanggal = $_POST['tanggal'];
+        $keterangan = $_POST['keterangan'];
+
+        $query = "INSERT INTO pesanan(nama,email,no_hp,alamat,tanggal_pesan,keterangan) VALUES('$nama','$emaill','$telephone','$alamat','$tanggal','$keterangan')";
+
+        if($koneksi->query($query)){
+            echo "Data Berhasil Di Tambah";
+        }else{
+            echo "Data Gagal Di Tambah";
+        }
+    }
+?> -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,10 +94,14 @@
     <link rel="icon" href="assets/img/logo.png" />
     <!-- responsive -->
     <link rel="stylesheet" href="assets/css/responsive.css" />
-    nk
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- FA 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <title>Visima</title>
+    <link rel="stylesheet" href="assets/css/form.css">
   </head>
-  <body>
+  <body id="body">
+    <img class="logo-bg" src="assets/img/headerr.png" alt="" />
     <nav class="a">
       <div class="logo">
         <img src="assets/img/logo.png" alt="" />
@@ -27,6 +113,11 @@
         <li><a href="#">Testimoni</a></li>
         <li><a href="#">Contact Us</a></li>
       </ul>
+      <div class="mobile-bar">
+        <span class="mobile-bar1 mobile-bar-all"></span>
+        <span class="mobile-bar2 mobile-bar-all"></span>
+        <span class="mobile-bar3 mobile-bar-all"></span>
+      </div>
     </nav>
     <header>
       <h1>VISIMA RENTAL</h1>
@@ -131,7 +222,7 @@
                   <li class="pricing-feature">Zoom Account (100 participants)</li>
                   <li class="pricing-feature">Free Sound System 1000 Watt</li>
                 </ul>
-                <button class="pricing-action">Order Now</button>
+                <a href="#" data-target="#login" data-toggle="modal"> <button class="pricing-action">Order Now</button></a>
               </div>
               <div class="pricing-item features-item ja-animate pricing__item--featured" data-animation="move-from-bottom" data-delay="item-1" style="min-height: 497px">
                 <div class="pricing-deco" style="background: linear-gradient(135deg, #11071a, #584efd)">
@@ -169,7 +260,7 @@
                   <li class="pricing-feature">Sound Man</li>
                   <li class="pricing-feature">Mixer Analog</li>
                 </ul>
-                <button class="pricing-action">Order Now</button>
+                <a href="#" data-target="#login" data-toggle="modal"> <button class="pricing-action">Order Now</button></a>
               </div>
               <div class="pricing-item features-item ja-animate" data-animation="move-from-bottom" data-delay="item-2" style="min-height: 497px">
                 <div class="pricing-deco">
@@ -207,7 +298,7 @@
                   <li class="pricing-feature">Monitor Active (2 pcs)</li>
                   <li class="pricing-feature">Mixer Digital</li>
                 </ul>
-                <button class="pricing-action">Order Now</button>
+                <a href="#" data-target="#login" data-toggle="modal"> <button class="pricing-action">Order Now</button></a>
               </div>
             </div>
           </section>
@@ -292,12 +383,94 @@
           </div>
         </section>
       </section>
+      <!-- Awal Contact Us -->
+      <div class="container-contact" id="contactklik">
+        <div class="contact">
+          <div class="contact-top">
+            <h1 data-aos="slide-down" data-aos-easing="linear" data-aos-duration="400">Contact Us</h1>
+            <p>Terhubung dengan Kami</p>
+          </div>
+          <div class="contact-main">
+            <div class="col-md-6 contact-left">
+              <h3>Feedback</h3>
+              <?php if(!empty($statusMsg)){ ?>
+              <p style="position: relative" class="statusMsg <?php echo !empty($msgClass)?$msgClass:''; ?>"><?php echo $statusMsg; ?></p>
+              <?php } ?>
+              <form action="index.php" method="post">
+                <input type="text" placeholder="Name" required name="name" />
+                <input type="text" placeholder="Email" required name="email" />
+                <textarea placeholder="Message" required name="message"></textarea>
+                <a href="#"><input type="submit" name="submit" value="send" /></a>
+              </form>
+            </div>
+            <div class="contact-right-map">
+              <div class="container-map">
+                <div class="box-image-1 box-image-all">
+                  <img src="assets/img/hp.png" alt="" />
+                  <p>call us</p>
+                </div>
+                <div class="box-image-2 box-image-all">
+                  <img src="assets/img/email.png" alt="" />
+                  <p>mail us</p>
+                </div>
+                <div class="box-image-3 box-image-all">
+                  <img src="assets/img/wa.png" alt="" />
+                  <p>contact us</p>
+                </div>
+                <div class="box-image-4 box-image-all">
+                  <img src="assets/img/hp.png" alt="" />
+                  <p>call us</p>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Akhir Contact Us -->
     </main>
 
+    <footer></footer>
+    <div class="back-to-top">
+      <a href="#body"><i class="fas fa-chevron-circle-up"></i></a>
+    </div>
+    <div id="login" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button data-dismiss="modal" class="close">&times;</button>
+            <div class="container" id="container">
+            <form action="index.php" method="POST" class="box-form">
+                <p><label>Nama *</label><br>
+                <input maxlength="50" name="nama" id="nama" type="text" required placeholder="Nama Lengkap"  /></p>
+                
+                <p><label>Email *</label><br>
+                <input maxlength="80" name="email" id="email" type="email"required  placeholder="exp: nama@gmail.com" /></p>
+                
+                <p><label>Telephone *</label><br>
+                <input name="telephone" id="phone" type="text" required  placeholder="exp: 081x-xxxx-xxxx" /></p>
+
+                <p><label>Alamat *</label><br>
+                <input name="alamat"  id="alamat" type="text" required  placeholder="Alamat Lengkap Anda" /></p>
+
+                <p><label>Tanggal Pesan *</label><br>
+                <input name="tanggal"  id="tanggal" type="datetime-local" required /></p>
+                
+                <p><label>Keterangan *</label><br>
+                <textarea maxlength="1000" id="keterangan" name="keterangan" required placeholder="Keterangan di sini ...." style="width:100%;height:90px;"></textarea></p>
+                
+                <small>* Required</small>
+                <p><input type="submit" value="Send Message" /></p>
+            </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="assets/js/main.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>

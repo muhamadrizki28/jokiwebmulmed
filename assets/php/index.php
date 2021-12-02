@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
     include('koneksi.php');
 
     if($_POST){
@@ -53,4 +53,4 @@
         </section>
     </div>
 </body>
-</html>
+</html> -->
