@@ -91,6 +91,16 @@
   .box-image-all img {
     width: 150px;
   }
+  .foot {
+    flex-direction: column;
+  }
+  .foot .f {
+    margin: auto;
+    margin-top: 50px;
+  }
+  .foot .loc {
+    width: 200px;
+  }
 }
 @media only screen and (max-width: 480px) {
   .testim {

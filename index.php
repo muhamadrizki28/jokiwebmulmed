@@ -107,11 +107,11 @@ include('assets/php/koneksi.php');
         <img src="assets/img/logo.png" alt="" />
       </div>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Why Us</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Testimoni</a></li>
-        <li><a href="#">Contact Us</a></li>
+        <li><a href="#section1">Home</a></li>
+        <li><a href="#section2">Why Us</a></li>
+        <li><a href="#section3">Services</a></li>
+        <li><a href="#section4">Testimoni</a></li>
+        <li><a href="#section5">Contact Us</a></li>
       </ul>
       <div class="mobile-bar">
         <span class="mobile-bar1 mobile-bar-all"></span>
@@ -119,7 +119,7 @@ include('assets/php/koneksi.php');
         <span class="mobile-bar3 mobile-bar-all"></span>
       </div>
     </nav>
-    <header>
+    <header  id="section1">
       <h1>VISIMA RENTAL</h1>
       <p>
         Visima Rental merupakan perusahaan yang bergerak di bidang audio visual. Kami menyediakan perlengkapan multimedia untuk acara wedding ataupun seminar seperti LED TV, Projector, Layar, Kamera, dsb. Visima Rental hadir untuk
@@ -127,9 +127,9 @@ include('assets/php/koneksi.php');
       </p>
       <button>Contact Us</button>
     </header>
-    <main class="why">
+    <main class="why" id="section2">
       <h2>WHY CHOOSE US?</h2>
-      <div class="bb">
+      <div class="bb" >
         <div class="box-why">
           <img src="assets/img/why1.png" alt="" />
           <h3>Jaminan Kualitas Suara</h3>
@@ -181,7 +181,7 @@ include('assets/php/koneksi.php');
 
     <!-- ===rizki -->
     <main>
-      <div class="header">
+      <div class="header" id="section3">
         <div class="inner-header flex">
           <section>
             <center><h1 style="font-size: 3.5em; font-family: 'Montserrat', sans-serif; color: white; margin-bottom: 3rem">Price List</h1></center>
@@ -336,10 +336,10 @@ include('assets/php/koneksi.php');
           </div>
         </section>
       </div>
-      <section>
+      <section id="section4">
         <section id="testim" class="testim">
           <h1>TESTIMONIALS</h1>
-          <div class="wrap">
+          <div class="wrap" >
             <span id="right-arrow" class="arrow right fa fa-chevron-right"></span>
             <span id="left-arrow" class="arrow left fa fa-chevron-left"></span>
             <ul id="testim-dots" class="dots">
@@ -384,8 +384,9 @@ include('assets/php/koneksi.php');
         </section>
       </section>
       <!-- Awal Contact Us -->
+      <div id="section5"></div>
       <div class="container-contact" id="contactklik">
-        <div class="contact">
+        <div class="contact" >
           <div class="contact-top">
             <h1 data-aos="slide-down" data-aos-easing="linear" data-aos-duration="400">Contact Us</h1>
             <p>Terhubung dengan Kami</p>
@@ -407,19 +408,20 @@ include('assets/php/koneksi.php');
               <div class="container-map">
                 <div class="box-image-1 box-image-all">
                   <img src="assets/img/hp.png" alt="" />
-                  <p>call us</p>
+                  <a href="w"><p>call us</p></a>
                 </div>
                 <div class="box-image-2 box-image-all">
                   <img src="assets/img/email.png" alt="" />
-                  <p>mail us</p>
+                  <a href="mailto:putrinuralifah34@gmail.com"><p>mail us</p></a>
                 </div>
                 <div class="box-image-3 box-image-all">
                   <img src="assets/img/wa.png" alt="" />
-                  <p>contact us</p>
+                  <a href="https://wa.me/6285774141707"><p>contact us</p></a>
                 </div>
                 <div class="box-image-4 box-image-all">
-                  <img src="assets/img/hp.png" alt="" />
-                  <p>call us</p>
+                <img src="assets/img/instagram2.png" alt="" />
+                  <a href="https://instagram.com/visimarental?utm_medium=copy_link"><p>Instagram</p></a>
+                  
                 </div>
               </div>
             </div>
@@ -429,8 +431,25 @@ include('assets/php/koneksi.php');
       </div>
       <!-- Akhir Contact Us -->
     </main>
-
-    <footer></footer>
+    <br><br><br><br>
+    <footer class="foot">
+      <div class="f top">
+        <img src="assets/img/logo.png" alt="" />
+      </div>
+      <div class="f os">
+        <h3>Our Services</h3>
+        <ul>
+          <li>Jasa Live Streaming</li>
+          <li>Sewa Sound System</li>
+        </ul>
+      </div>
+      <div class="f loc">
+        <p>
+          Jl. Cilobak 1 No.36, Pangkalan Jati, Kec. Cinere Kota Depok, Jawa
+          Barat 16514
+        </p>
+      </div>
+    </footer>
     <div class="back-to-top">
       <a href="#body"><i class="fas fa-chevron-circle-up"></i></a>
     </div>
@@ -467,6 +486,7 @@ include('assets/php/koneksi.php');
         </div>
       </div>
     </div>
+    
     <!-- JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="assets/js/main.js"></script>

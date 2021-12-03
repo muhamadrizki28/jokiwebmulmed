@@ -179,6 +179,7 @@ header p {
   font-family: "Poppins", sans-serif;
 }
 .foot {
+  margin-top: 100px;
   padding: 50px;
   background-color: black;
   color: white;
@@ -387,15 +388,7 @@ main {
       rgba(221, 221, 221, 0.08) 66.666%,
       rgba(221, 221, 221, 0.08) 99.999%
     ),
-    radial-gradient(
-      circle at 14% 98%,
-      rgba(27, 24, 24, 0.08) 0%,
-      rgba(184, 184, 184, 0.08) 33.333%,
-      rgba(96, 96, 96, 0.08) 33.333%,
-      rgba(96, 96, 96, 0.08) 66.666%,
-      rgba(7, 7, 7, 0.08) 66.666%,
-      rgba(7, 7, 7, 0.08) 99.999%
-    ),
+    radial-gradient(circle at 14% 98%, rgba(27, 24, 24, 0.08) 0%, rgba(184, 184, 184, 0.08) 33.333%, rgba(96, 96, 96, 0.08) 33.333%, rgba(96, 96, 96, 0.08) 66.666%, rgba(7, 7, 7, 0.08) 66.666%, rgba(7, 7, 7, 0.08) 99.999%),
     linear-gradient(45deg, rgb(38, 32, 39), rgb(11, 16, 58));
   color: white;
 }
