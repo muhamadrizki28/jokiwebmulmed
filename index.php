@@ -2,14 +2,14 @@
 <!-- <?php
 $statusMsg = '';
 $msgClass = '';
-if(isset($_POST['submit'])){
+if(isset($_POST['submitt'])){
 
-    $email = $_POST['email'];
-    $name = $_POST['name'];
-    $message = $_POST['message'];
+    $email = $_POST['emaill'];
+    $namee = $_POST['namee'];
+    $messagee = $_POST['messagee'];
 
 
-    if(!empty($email) && !empty($name) && !empty($message)){
+    if(!empty($email) && !empty($namee) && !empty($messagee)){
 
         if(filter_var($email, FILTER_VALIDATE_EMAIL) === false){
             $statusMsg = 'Please enter your valid email.';
@@ -17,21 +17,21 @@ if(isset($_POST['submit'])){
         }else{
             //Untuk Tampilan di Subjek dan penerima email
             $toEmail = 'rizkimod28@gmail.com'; 
-            $emailSubject = 'Pesan Website Dari '.$name;
+            $emailSubject = 'Pesan Website Dari '.$namee;
             $htmlContent = '
               <div style="width:100%;height:100%; class="hihi">
                 <div style="width:90%;height:100%;margin:auto;background-color:#002147;color:white;padding:1em;">
-                    <h2 style="margin:0!important;background-color:#ffc107;color:black!important;font-weight:bolder;font-size:20px;text-align:center;padding:2em;border-radius:0 0 3px 3px;">Form Kontak Website IMC</h2>
-                    <h3>Nama:</h3><p style="background:linear-gradient(rgba(162, 162, 162,0.8),rgba(162, 162, 162,0.6));padding:.7em;">'.$name.'</p>
+                    <h2 style="margin:0!important;background-color:#48a0db;color:black!important;font-weight:bolder;font-size:20px;text-align:center;padding:2em;border-radius:0 0 3px 3px;">Form Kontak Website Visima</h2>
+                    <h3>Nama:</h3><p style="background:linear-gradient(rgba(162, 162, 162,0.8),rgba(162, 162, 162,0.6));padding:.7em;">'.$namee.'</p>
                     <h3>Email:</h3><p style="background:linear-gradient(rgba(162, 162, 162,0.8),rgba(162, 162, 162,0.6));padding:.7em;">'.$email.'</p>
-                    <h3>Message:</h3><p style="background:linear-gradient(rgba(162, 162, 162,0.8),rgba(162, 162, 162,0.6));padding:.7em;">'.$message.'</p>
-                    <div style="width:40%;height:100%;margin:auto;padding:1.3em 1.1em;border-radius:2px;background-color:#ffc107;text-align:center!important;">
-                      <a href="www.imc.com" style="text-decoration:none!important;font-weight:bolder;color:black!important;text-align:center!important;">Kunjungi Website IMC</a>
+                    <h3>Message:</h3><p style="background:linear-gradient(rgba(162, 162, 162,0.8),rgba(162, 162, 162,0.6));padding:.7em;">'.$messagee.'</p>
+                    <div style="width:40%;height:100%;margin:auto;padding:1.3em 1.1em;border-radius:2px;background-color:#48a0db;text-align:center!important;">
+                      <a href="www.visima.com" style="text-decoration:none!important;font-weight:bolder;color:black!important;text-align:center!important;">Kunjungi Website Visima</a>
                     </div>
                     <div style="width:100%;height:100%;margin:auto;color:white;padding:1em;text-align:center;padding-top:2em;">
                       <p style="opacity:0.8;">
                       Copyright &copy; 2021  All Rights Reserved by <br/>
-                      <span style="text-align:center;">IM Connect</span>
+                      <span style="text-align:center;">Visima</span>
                       </br/>
                       </p>
                     </div>
@@ -44,7 +44,7 @@ if(isset($_POST['submit'])){
             $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
 
-            $headers .= 'From: '.$name.'<'.$email.'>'. "\r\n";
+            $headers .= 'From: '.$namee.'<'.$email.'>'. "\r\n";
 
             //Send EMail
             if(mail($toEmail,$emailSubject,$htmlContent,$headers)){
@@ -60,7 +60,8 @@ if(isset($_POST['submit'])){
         $msgClass = 'errordiv';
     }
 }
-
+?>
+<?php
 include('assets/php/koneksi.php');
 
     if($_POST){
@@ -179,7 +180,6 @@ include('assets/php/koneksi.php');
       </p>
     </main>
 
-    <!-- ===rizki -->
     <main>
       <div class="header" id="section3">
         <div class="inner-header flex">
@@ -397,11 +397,11 @@ include('assets/php/koneksi.php');
               <?php if(!empty($statusMsg)){ ?>
               <p style="position: relative" class="statusMsg <?php echo !empty($msgClass)?$msgClass:''; ?>"><?php echo $statusMsg; ?></p>
               <?php } ?>
-              <form action="index.php" method="post">
-                <input type="text" placeholder="Name" required name="name" />
-                <input type="text" placeholder="Email" required name="email" />
-                <textarea placeholder="Message" required name="message"></textarea>
-                <a href="#"><input type="submit" name="submit" value="send" /></a>
+              <form action="" method="post">
+                <input type="text" placeholder="Name" required name="namee" />
+                <input type="text" placeholder="Email" required name="emaill" />
+                <textarea placeholder="Message" required name="messagee"></textarea>
+                <input type="submit" name="submitt" value="sendd" />
               </form>
             </div>
             <div class="contact-right-map">
